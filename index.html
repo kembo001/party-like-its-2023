@@ -31,7 +31,9 @@
                     <li>Name: Brandon</li>
                     <li>overall: 79</li>
                     <li>Badges: 2 silver, 3 bronze</li>
-                    <li>Occupation: Web Developer</li>
+                    <li>Age: 23</li>
+                    <li>Marital status: Single</li>
+                    <li>Kids: 0</li>
                   </ul>
                 </div>
               </div>
@@ -72,8 +74,10 @@
 
             <article>
               <p>NFL and NBA Champs</p>
-              <img src="img/nfl.jpg" alt="">
-              <img src="img/nba.webp" alt="">
+ <div style="display: flex;">
+  <img src="img/nfl.jpg" alt="" width="214px">
+  <img src="img/nba.webp" alt="" width="214px">
+ </div>
             </article>
         </div>
 
@@ -90,16 +94,24 @@
 <div class="gallery-container">
   <article class="gallery">
     <h2>Paris</h2>
-    <div>
-      <a href=""><img src="img/paris/paris1.jpg" alt=""></a>
-      <a href=""><img src="img/paris/paris2.jpg" alt=""></a>
-      <a href=""><img src="img/paris/paris4.jpg" alt=""></a>
-      <a href=""><img src="img/paris/paris5.jpg" alt=""></a>
-      <a href=""><img src="img/paris/paris6.jpg" alt=""></a>
-      <a class="see-more" href=""><img src="img/paris/paris3.jpg" alt="">      <span>See more</span></a>
-
+    <div class="gallery-images">
+      <div class="gallery-item"><img src="img/paris/paris1.jpg" alt=""></div>
+      <div class="gallery-item"><img src="img/paris/paris2.jpg" alt=""></div>
+      <div class="gallery-item"><img src="img/paris/paris4.jpg" alt=""></div>
+      <div class="gallery-item"><img src="img/paris/paris5.jpg" alt=""></div>
+      <div class="gallery-item"><img src="img/paris/paris6.jpg" alt=""></div>
+      <a href="paris.html"><div class="see-more"><img src="img/paris/paris3.jpg" alt=""><span>See more</span></div></a>    
     </div>
   </article>
+
+  <div id="myModal" class="modal">
+    <div class="modal-nav">
+      <button id="prevBtn">&lt;</button>
+      <button id="nextBtn">&gt;</button>
+    </div>
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImg">
+  </div>
 
   <article class="gallery">
     <h2>Amsterdam</h2>

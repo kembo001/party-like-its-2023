@@ -407,4 +407,50 @@ document.addEventListener('DOMContentLoaded', function () {
   });
   
 
-  
+
+  var modal = document.getElementById("myModal");
+  var modalImg = document.getElementById("modalImg");
+  var galleryItems = document.querySelectorAll(".gallery-item");
+  var prevBtn = document.getElementById("prevBtn");
+  var nextBtn = document.getElementById("nextBtn");
+  var currentIndex;
+
+  galleryItems.forEach(function(item, index) {
+    item.addEventListener("click", function(e) {
+      e.preventDefault();
+      modal.style.display = "flex";
+      modalImg.src = this.querySelector("img").src;
+      currentIndex = index;
+    });
+  });
+
+  prevBtn.addEventListener("click", function() {
+    showImage(-1);
+  });
+
+  nextBtn.addEventListener("click", function() {
+    showImage(1);
+  });
+
+  modal.addEventListener("click", function(e) {
+    if (e.target === modal || e.target.className === "close") {
+      closeModal();
+    }
+  });
+
+  function showImage(direction) {
+    currentIndex += direction;
+
+    if (currentIndex < 0) {
+      currentIndex = galleryItems.length - 1;
+    } else if (currentIndex >= galleryItems.length) {
+      currentIndex = 0;
+    }
+
+    modalImg.src = galleryItems[currentIndex].querySelector("img").src;
+  }
+
+  function closeModal() {
+    modal.style.display = "none";
+    currentIndex = undefined;
+  }
