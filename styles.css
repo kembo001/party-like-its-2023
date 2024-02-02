@@ -10,7 +10,15 @@ body{ background-image: url(img/cargif.gif); background-size: 25%; } @font-face 
 }
 
 
-
+.close{
+  color: white;
+  position: absolute;
+  top: 0;
+  /* width: 65%; */
+  right: 2rem;
+  font-size: 5rem;
+  color: #FF98F5;
+}
 
 .gallery img{
   width: 250px;
