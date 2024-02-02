@@ -96,7 +96,7 @@ body{ background-image: url(img/cargif.gif); background-size: 25%; } @font-face 
 }
 
 .gallery-item:hover {
-  transform: scale(1.1);
+  transform: scale(.9);
 }
 
 .see-more {
@@ -118,4 +118,9 @@ body{ background-image: url(img/cargif.gif); background-size: 25%; } @font-face 
   font-size: 3rem;
   cursor: pointer;
   color: #fff;
+}
+
+.after-window{
+  background: #FFCDFA;
+  padding: 0px 2rem 15px;
 }
