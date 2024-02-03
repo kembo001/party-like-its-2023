@@ -480,3 +480,28 @@ document.addEventListener('DOMContentLoaded', function () {
     modal.style.display = "none";
     currentIndex = undefined;
   }
+
+  function checkPassword() {
+    var enteredPassword = document.getElementById("password").value;
+    var correctPassword = "Password"; // Replace with your desired password
+
+    if (enteredPassword === correctPassword) {
+        // Redirect to the main content or another page
+        window.location.href = "main.html";
+    } else {
+        // Show a custom modal with an image
+        var modal = document.getElementById("customModal");
+        modal.style.display = "block";
+
+        // You can also set the image source dynamically
+        document.getElementById("modalImage").src = "img/adventure-time-bmo-game-over-aft70vderh10hupg.gif";
+    }
+}
+
+// Close the modal when the user clicks anywhere outside of it
+window.onclick = function (event) {
+    var modal = document.getElementById("customModal");
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+};
