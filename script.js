@@ -391,7 +391,7 @@ document.addEventListener('DOMContentLoaded', function () {
       title: 'The Stars Keep On Calling My Name',
       src: 'music/The Stars Keep On Calling My Name.mp3'
     },
-    // Add more songs as needed
+
     {
       title: 'Please Shut Up',
       src: 'music/music-inro.mp3'
@@ -425,7 +425,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   audio.addEventListener('ended', function () {
-    // Play the next song when the current one ends
+ 
     currentSongIndex = (currentSongIndex + 1) % playlist.length;
     loadSong(currentSongIndex);
     audio.play();
@@ -483,22 +483,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function checkPassword() {
     var enteredPassword = document.getElementById("password").value;
-    var correctPassword = "Password"; // Replace with your desired password
+    var correctPassword = "Password"; 
 
     if (enteredPassword === correctPassword) {
-        // Redirect to the main content or another page
+        
         window.location.href = "main.html";
     } else {
-        // Show a custom modal with an image
+        
         var modal = document.getElementById("customModal");
         modal.style.display = "block";
 
-        // You can also set the image source dynamically
+       
         document.getElementById("modalImage").src = "img/adventure-time-bmo-game-over-aft70vderh10hupg.gif";
     }
 }
 
-// Close the modal when the user clicks anywhere outside of it
+
 window.onclick = function (event) {
     var modal = document.getElementById("customModal");
     if (event.target === modal) {
