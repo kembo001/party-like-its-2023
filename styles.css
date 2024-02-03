@@ -124,3 +124,7 @@ body{ background-image: url(img/cargif.gif); background-size: 25%; } @font-face 
   background: #FFCDFA;
   padding: 0px 2rem 15px;
 }
+
+body{
+  backdrop-filter: brightness(0.5);
+}

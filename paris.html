@@ -7,10 +7,128 @@
     <title>Paris</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body style="    max-width: 1200px!important;
+padding-right: 15px;
+padding-left: 15px;
+margin-right: auto;
+margin-left: auto;">
     <h1>Paris</h1>
-    <img style="    width: 80%;
+    <img style=" 
     margin: 0 auto;
     display: flex;" src="img/tumblr_museeq6t2Q1qznbwpo1_500.gif" alt="">
+
+   <div style="-webkit-box-flex: 0;
+   -webkit-flex: 0 0 87.66667%;
+   -ms-flex: 0 0 87.66667%;
+   flex: 0 0 87.66667%;
+   max-width: 87.66667%;">
+    <h2>New years in paris 2023</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi praesentium culpa beatae repellat consequatur facere doloremque illum ea atque, voluptatibus, nobis velit nemo aliquid! Sit eligendi quo doloribus amet voluptate.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem omnis laborum soluta ipsam aperiam. Voluptatibus repellat veritatis odio ratione! Iste dignissimos dolorem quia ex tempora vero totam hic eum dolores?</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/PF3O9mZYnEo?si=9yjfvt5oEaBHeqMm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <div class="gallery-container">
+    <article class="gallery">
+        <h2>Paris</h2>
+        <div class="gallery-images">
+          <div class="gallery-item"><img src="img/paris/paris1.jpg" alt=""></div>
+          <div class="gallery-item"><img src="img/paris/paris2.jpg" alt=""></div>
+          <div class="gallery-item"><img src="img/paris/paris6.jpg" alt=""></div>
+          <div class="gallery-item"><img src="img/paris/paris5.jpg" alt=""></div>
+          <div class="gallery-item"><img src="img/paris/paris4.jpg" alt=""></div>
+          <div class="gallery-item"><img src="img/paris/paris23.jpg" alt=""></div>
+          <div class="gallery-item"><img src="img/paris/paris3.jpg" alt=""></div>
+      <div class="gallery-item"><video width="253px" height="253px" style="object-fit:cover" src="img/paris/ParisNewYears.mp4"></video></div>
+      <div class="gallery-item"><img src="img/paris/paris7.jpg" alt=""></div>
+      <div class="gallery-item"><img src="img/paris/paris8.jpg" alt=""></div>
+      <div class="gallery-item"><img src="img/paris/paris9.jpg" alt=""></div>
+      <div class="gallery-item"><img src="img/paris/paris10.jpg" alt=""></div>
+      <div class="gallery-item"><img src="img/paris/paris11.jpg" alt=""></div>
+      <div class="gallery-item"><img src="img/paris/paris12.jpg" alt=""></div>
+      <div class="gallery-item"><img src="img/paris/paris13.jpg" alt=""></div>
+      <div class="gallery-item"><img src="img/paris/paris14.jpg" alt=""></div>
+      <div class="gallery-item"><img src="img/paris/paris15.jpg" alt=""></div>
+      <div class="gallery-item"><img src="img/paris/paris16.jpg" alt=""></div>
+      <div class="gallery-item"><img src="img/paris/paris17.jpg" alt=""></div>
+      <div class="gallery-item"><img src="img/paris/paris19.jpg" alt=""></div>
+      <div class="gallery-item"><img src="img/paris/paris20.jpg" alt=""></div>
+      <div class="gallery-item"><img src="img/paris/paris21.jpg" alt=""></div>
+      <div class="gallery-item"><img src="img/paris/paris22.jpg" alt=""></div>
+      <div class="gallery-item"><img src="img/paris/paris24.jpg" alt=""></div>
+        </div>
+      </article>
+      <div id="myModal" class="modal">
+        <div class="modal-nav">
+          <button id="prevBtn">&lt;</button>
+          <button id="nextBtn">&gt;</button>
+        </div>
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg">
+      </div>
+    </div>
+   </div>
 </body>
 </html>
+
+<style>
+     p{
+        color: #fff;
+        line-height: 1.5;
+    }
+    h2{
+        color: #FF98F5;
+    }
+    .gallery-images {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+</style>
+
+<script>
+    var modal = document.getElementById("myModal");
+  var modalImg = document.getElementById("modalImg");
+  var galleryItems = document.querySelectorAll(".gallery-item");
+  var prevBtn = document.getElementById("prevBtn");
+  var nextBtn = document.getElementById("nextBtn");
+  var currentIndex;
+
+  galleryItems.forEach(function(item, index) {
+    item.addEventListener("click", function(e) {
+      e.preventDefault();
+      modal.style.display = "flex";
+      modalImg.src = this.querySelector("img").src;
+      currentIndex = index;
+    });
+  });
+
+  prevBtn.addEventListener("click", function() {
+    showImage(-1);
+  });
+
+  nextBtn.addEventListener("click", function() {
+    showImage(1);
+  });
+
+  modal.addEventListener("click", function(e) {
+    if (e.target === modal || e.target.className === "close") {
+      closeModal();
+    }
+  });
+
+  function showImage(direction) {
+    currentIndex += direction;
+
+    if (currentIndex < 0) {
+      currentIndex = galleryItems.length - 1;
+    } else if (currentIndex >= galleryItems.length) {
+      currentIndex = 0;
+    }
+
+    modalImg.src = galleryItems[currentIndex].querySelector("img").src;
+  }
+
+  function closeModal() {
+    modal.style.display = "none";
+    currentIndex = undefined;
+  }
+</script>
+
