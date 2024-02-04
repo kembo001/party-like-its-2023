@@ -163,3 +163,26 @@ button {
 .btn_auto{
   color: #000;
 }
+
+.after-gallery{display: none;}
+.after-gallery{
+  background: #FFCDFA;
+  padding: 0px 2rem 15px;
+}
+
+.after-gallery p{
+  font-size: 3rem;
+  color: white;
+  font-family: 'Comic Sans MS', cursive;
+  letter-spacing: 3px;
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .after-window{
+    display: none !important;
+  }
+  .after-gallery{
+    display: block;
+  }
+}
