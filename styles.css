@@ -185,4 +185,8 @@ button {
   .after-gallery{
     display: block;
   }
+
+  .modal-nav button{
+    display: none;
+  }
 }
