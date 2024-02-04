@@ -18,7 +18,7 @@ margin-left: auto;">
     margin: 0 auto;
     display: flex;" src="img/tumblr_museeq6t2Q1qznbwpo1_500.gif" alt="">
 
-   <div style="-webkit-box-flex: 0;
+   <div class="paris" style="-webkit-box-flex: 0;
    -webkit-flex: 0 0 87.66667%;
    -ms-flex: 0 0 87.66667%;
    flex: 0 0 87.66667%;
@@ -26,7 +26,7 @@ margin-left: auto;">
     <h2>New years in paris 2023</h2>
     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi praesentium culpa beatae repellat consequatur facere doloremque illum ea atque, voluptatibus, nobis velit nemo aliquid! Sit eligendi quo doloribus amet voluptate.</p>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem omnis laborum soluta ipsam aperiam. Voluptatibus repellat veritatis odio ratione! Iste dignissimos dolorem quia ex tempora vero totam hic eum dolores?</p>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/PF3O9mZYnEo?si=9yjfvt5oEaBHeqMm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe style="max-width: 100%;" width="560" height="315" src="https://www.youtube.com/embed/PF3O9mZYnEo?si=9yjfvt5oEaBHeqMm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     <div class="gallery-container">
     <article class="gallery">
         <h2>Paris</h2>
@@ -82,6 +82,19 @@ margin-left: auto;">
     .gallery-images {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    
+}
+@media (max-width: 768px){
+    .paris{
+        -webkit-flex: 0 0 100% !important;
+   -ms-flex: 0 0 100% !important;
+   flex: 0 0 100% !important;
+   max-width: 100% !important;
+    }
+    .gallery-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) !important;
+}
 }
 </style>
 
