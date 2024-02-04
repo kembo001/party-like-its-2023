@@ -483,7 +483,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function checkPassword() {
     var enteredPassword = document.getElementById("password").value;
-    var correctPassword = "Password"; 
+    var correctPassword = "NucleicAcids"; 
 
     if (enteredPassword === correctPassword) {
         
