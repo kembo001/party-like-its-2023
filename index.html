@@ -1,72 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Party Like It's 2023</title>
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Party Like It's 2023</title>
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body style="display: flex; justify-content:center;align-items: center;">
+<body class="login-page">
 
-
-    <article class="window" style="min-width: 540px;margin-top: 10rem;">
+  <main class="login">
+    <form class="window" id="loginForm" autocomplete="off">
       <div class="title-bar">
-        <div>
-          <span class="title-bar__title">Welcome :D</span>
+        <span class="title-bar__title">Welcome :D</span>
+        <div class="title-bar__controls" aria-hidden="true"><span>?</span><span>×</span></div>
+      </div>
+      <div class="login__body">
+        <img class="login__icon" src="img/star-spinningnewnew.gif" alt="">
+        <div class="login__fields">
+          <p>Type the password to enter Party Like It's 2023.</p>
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password">
+          <p class="login__hint">Hint: My favorite color</p>
         </div>
       </div>
-      <div class="menu" style="z-index: 10;
-      position: relative;">
-        <label for="password">Password:</label>
-        <input type="password" id="password" />
+      <div class="login__actions">
+        <button type="submit" class="btn" id="submitBtn">OK</button>
+        <button type="reset" class="btn">Cancel</button>
       </div>
-      <label for="password">password: NucleicAcids</label>
-      <div class="container" style="padding: 0; box-shadow:none;">
-        <div  style="margin-top: 0;margin-bottom: 20px;" class="controls">
-          <button class="btn btn_auto" id="playPauseBtn" onclick="checkPassword()">Submit</button>
-        </div>
-      </div>
-    </article>
+    </form>
+  </main>
 
-    <div id="customModal" class="modal">
-      <span class="close" onclick="document.getElementById('customModal').style.display='none'">&times;</span>
-      <img id="modalImage" src="img/adventure-time-bmo-game-over-aft70vderh10hupg.gif" alt="Incorrect Password Image">
+  <div id="customModal" class="modal" role="alertdialog" aria-modal="true" aria-labelledby="errorTitle">
+    <div class="window error-dialog">
+      <div class="title-bar">
+        <span class="title-bar__title" id="errorTitle">Error</span>
+        <div class="title-bar__controls"><button type="button" class="close" data-close-modal aria-label="Close">×</button></div>
+      </div>
+      <div class="error-dialog__body">
+        <img id="modalImage" src="img/adventure-time-bmo-game-over-aft70vderh10hupg.gif" alt="Game over">
+        <p>Wrong password. Try again!</p>
+      </div>
+      <div class="error-dialog__actions">
+        <button type="button" class="btn" data-close-modal>OK</button>
+      </div>
+    </div>
   </div>
 
-  <style>
-    .modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    overflow: auto;
-}
-
-.modal img {
-    display: block;
-    margin: 50px auto; 
-}
-
-.close {
-    color: white;
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    font-size: 25px;
-    cursor: pointer;
-}
-
-
-
-@media (max-width: 768px){
-.window{
-  min-width: 340px !important;
-}}
-  </style>
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
