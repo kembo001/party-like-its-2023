@@ -543,7 +543,7 @@ function initLightbox() {
 /* ---------- Password page (index.html) ---------- */
 function checkPassword() {
   var enteredPassword = document.getElementById("password").value;
-  var correctPassword = "NucleicAcids";
+  var correctPassword = "Nucleic Acids";
 
   if (enteredPassword === correctPassword) {
     window.location.href = "main.html";
